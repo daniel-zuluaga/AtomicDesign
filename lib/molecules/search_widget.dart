@@ -20,24 +20,22 @@ class SearchWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Row(
-        children: [
-          InputField(
-            width: width ?? 16, 
-            height: height ?? 16, 
-            hintText: hintText,
-          ),
-          const SizedBox(height: 10),
-          ButtonText(
+    return Row(
+      children: [
+        InputField(
+          width: width ?? 16, 
+          height: height ?? 16, 
+          hintText: hintText,
+        ),
+        const SizedBox(height: 10),
+        ButtonText(
+          onPressed: (){}, 
+          child: IconButton(
             onPressed: (){}, 
-            child: IconButton(
-              onPressed: (){}, 
-              icon: const Icon(Icons.search_rounded)
-            )
+            icon: const Icon(Icons.search_rounded)
           )
-        ],
-      ),
+        )
+      ],
     );
   }
 }
