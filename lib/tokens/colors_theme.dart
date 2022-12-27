@@ -3,7 +3,7 @@
 import 'dart:ui';
 
 const brandPrimary = Color.fromARGB(255, 51, 129, 8);
-const brandSecondary = Color.fromARGB(255, 255, 255, 255);
+const brandSecondary = Color.fromARGB(255, 0, 0, 0);
 const statusInfo = Color.fromARGB(255, 0, 164, 107);
 const statusWarning = Color.fromARGB(255, 191, 120, 13);
 const statusDisabled = Color.fromARGB(255, 86, 87, 88);

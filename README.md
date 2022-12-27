@@ -10,8 +10,14 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+# Atomic Design
+This package is a structure how to use the design system with atomic design
 
-TODO: Put a short description of the package here that helps potential users
+This Article explains about atomic design and what is it for:
+https://medium.com/bancolombia-tech/creando-nuestro-sistema-de-dise%C3%B1o-basado-en-atomic-design-7e2bb37e19e8
+author: Daniel Herrera Sanchez
+
+Put a short description of the package here that helps potential users
 know whether this package might be useful for them.
 
 ## Features

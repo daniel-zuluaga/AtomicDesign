@@ -9,8 +9,8 @@ class SearchInputField extends StatelessWidget {
   final Widget? iconInput;
   final TextStyle? labelStyle;
   final TextStyle? hintStyle;
-  final Function? onPress;
   final IconData? iconButton;
+  final Function onPress;
 
   const SearchInputField({super.key, 
     required this.width, 
@@ -20,8 +20,8 @@ class SearchInputField extends StatelessWidget {
     this.iconInput, 
     this.labelStyle, 
     this.hintStyle, 
-    this.onPress, 
-    this.iconButton
+    this.iconButton, 
+    required this.onPress
   });
 
   @override
@@ -46,7 +46,7 @@ class SearchInputField extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width, vertical: height),
             child: ElevatedButton(
-              onPressed: onPress!() ?? (){}, 
+              onPressed: onPress(), 
               child: Icon(iconButton ?? Icons.search_rounded),
             ),
           ),
