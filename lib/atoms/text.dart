@@ -13,9 +13,8 @@ class OurText extends StatelessWidget{
     this.colorText,
     this.fontSize,
     this.textAlign
+  }):super(key:key);
 
-  }
-      ):super(key:key);
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -29,28 +28,75 @@ class OurText extends StatelessWidget{
 
 class H1 extends StatelessWidget{
   final String? text;
-  const H1({Key? key, required this.text}):super(key:key);
+  final Color? colorText;
+  final TextAlign? textAlign;
+  final double? fontSizeText;
+
+  const H1({
+    Key? key, 
+    required this.text, 
+    this.colorText, 
+    this.textAlign, this.fontSizeText
+  }):super(key:key);
+
   @override
   Widget build(BuildContext context) {
-    return OurText (text:text, colorText: h1Color, fontSize: h1Size,key: key);
+    return OurText (
+      text:text, 
+      colorText: colorText ?? h1Color, 
+      key: key,
+      textAlign: textAlign,
+      fontSize: fontSizeText ?? h1Size,
+    );
   }
 }
 
 class H2 extends StatelessWidget{
   final String? text;
-  const H2({Key? key, required this.text}):super(key:key);
+  final Color? colorText;
+  final TextAlign? textAlign;
+  final double? fontSizeText;
+
+  const H2({
+    Key? key, 
+    required this.text, 
+    this.colorText, 
+    this.textAlign, 
+    this.fontSizeText
+  }):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurText (text:text, colorText: h2Color,fontSize: h2Size, key: key,);
+    return OurText (
+      text:text, 
+      colorText: colorText ?? h2Color,
+      fontSize: fontSizeText ?? h2Size, 
+      textAlign: textAlign,
+      key: key
+    );
   }
 }
 
 class ContentText extends StatelessWidget{
   final String? text;
-  const ContentText({Key? key, required this.text}):super(key:key);
+  final Color? colorText;
+  final TextAlign? textAlign;
+  final double? fontSizeText;
+
+  const ContentText({
+    Key? key, 
+    required this.text, 
+    this.colorText, 
+    this.textAlign, 
+    this.fontSizeText
+  }):super(key:key);
   @override
   Widget build(BuildContext context) {
-    return OurText (text:text, colorText: h3Color,fontSize: contentText, key: key,);
+    return OurText (
+      text:text, 
+      colorText: colorText ?? contentColor,
+      fontSize: fontSizeText ?? contentTextSize, 
+      textAlign: textAlign,
+      key: key,);
   }
 }
 

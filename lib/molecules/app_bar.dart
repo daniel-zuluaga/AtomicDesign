@@ -6,15 +6,15 @@ class OurAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
   final Icon iconAppBarr;
   final Widget? leading;
-  final List<Widget>? iconAction;
+  final List<Widget>? actions;
 
 
   const OurAppBar({
     super.key, 
-    this.title = 'Arquitectura limpia',
+    this.title = 'Hola soy Daniel',
     this.iconAppBarr = const Icon(Icons.add), 
     this.leading, 
-    this.iconAction
+    this.actions
   });
 
   @override
@@ -24,11 +24,13 @@ class OurAppBar extends StatelessWidget with PreferredSizeWidget {
       leading: leading ?? const Icon(Icons.arrow_back_ios),
       backgroundColor: footerBackground,
       title: H1(text: title, key: const Key('head-wc'),),
-      actions: iconAction ?? [
+      actions: actions ?? [
+        const SizedBox(width: 12,),
         IconButton(
           icon: iconAppBarr,
           onPressed: () {},
         ),
+        const SizedBox(width: 12,),
         IconButton(
           icon: const Icon(Icons.navigate_next),
           onPressed: () {}
