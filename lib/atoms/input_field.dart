@@ -31,34 +31,33 @@ class InputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width, vertical: height),
-        child: TextField(
-          decoration: InputDecoration(
-            labelText: labelText,
-            hintStyle: hintStyle ?? const TextStyle(color: h3Color),
-            labelStyle: labelStyle ?? const TextStyle(color: h3Color),
-            hintText: hintText,
-            icon: iconInput ?? const Icon(Icons.reduce_capacity_rounded),
-            suffixIcon: suffixIcon ?? const Icon(Icons.search_rounded),
-            enabledBorder: enabledBorder ??
-              OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: borderColor ?? inputEnabledColor,
-                  width: 1.5,
-                ),
-              ),
-            focusedBorder: focusedBorder ??
-              OutlineInputBorder(
+    return Container(
+      width: width,
+      height: height,
+      child: TextField(
+        decoration: InputDecoration(
+          labelText: labelText,
+          hintStyle: hintStyle ?? const TextStyle(color: h3Color),
+          labelStyle: labelStyle ?? const TextStyle(color: h3Color),
+          hintText: hintText,
+          icon: iconInput ?? const Icon(Icons.reduce_capacity_rounded),
+          suffixIcon: suffixIcon ?? const Icon(Icons.search_rounded),
+          enabledBorder: enabledBorder ??
+            OutlineInputBorder(
               borderSide: BorderSide(
-                color: borderColor ?? inputFocusedField,
-                width: 1.2,
+                color: borderColor ?? inputEnabledColor,
+                width: 1.5,
               ),
             ),
-            filled: false,
-            fillColor: inputFillColor
+          focusedBorder: focusedBorder ??
+            OutlineInputBorder(
+            borderSide: BorderSide(
+              color: borderColor ?? inputFocusedField,
+              width: 1.2,
+            ),
           ),
+          filled: false,
+          fillColor: inputFillColor
         ),
       ),
     );

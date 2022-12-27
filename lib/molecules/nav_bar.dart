@@ -1,16 +1,18 @@
 import 'package:atomic_design/fundation/color_fundation.dart';
 import 'package:flutter/material.dart';
 
-class OurFooter extends StatelessWidget {
+class NavBarWidget extends StatelessWidget {
 
   final List<BottomNavigationBarItem>? bottomNavigationBar;
   final Icon iconLeft;
   final Icon iconRight;
+  final Color? backgroundNavBar;
 
-  const OurFooter({super.key, 
+  const NavBarWidget({super.key, 
     this.iconRight = const Icon(Icons.home_rounded),
     this.iconLeft = const Icon(Icons.school_rounded), 
-    this.bottomNavigationBar
+    this.bottomNavigationBar, 
+    this.backgroundNavBar
   });
 
   @override
@@ -31,9 +33,9 @@ class OurFooter extends StatelessWidget {
           currentIndex: 0,
           selectedItemColor: selectedItemColor,
           unselectedItemColor: unselectedItemColor,
-          backgroundColor: footerBackground,
+          backgroundColor: backgroundNavBar ?? footerBackground,
           showUnselectedLabels: false,
-          showSelectedLabels: false,
+          showSelectedLabels: true,
           iconSize: 30.0,
           onTap: (index) {
             print('oprimio el elemento --> $index');

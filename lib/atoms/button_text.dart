@@ -16,16 +16,14 @@ class ButtonText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: ElevatedButton(
-          onPressed: (){},
-          style: buttonStyle ?? ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(
-            colorButton,
-          ),
+    return ElevatedButton(
+        onPressed: (){},
+        style: buttonStyle ?? ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(
+          colorButton,
         ),
-        child: child,
-      )
+      ),
+      child: child,
     );
   }
 }
